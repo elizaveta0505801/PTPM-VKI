@@ -81,13 +81,13 @@ class TestTriangleInfo(unittest.TestCase):
     def test_each_coordinate_contains_two_values(self):
         _, coordinates = triangle_info("3", "4", "5")
         for point in coordinates:
-        self.assertEqual(len(point), 2)
+            self.assertEqual(len(point), 2)
 
     def test_coordinates_are_integers(self):
         _, coordinates = triangle_info("3", "4", "5")
         for point in coordinates:
-        for value in point:
-        self.assertIsInstance(value, int)
+            for value in point:
+                self.assertIsInstance(value, int)
 
     def test_coordinates_fit_inside_drawing_area(self):
         _, coordinates = triangle_info("3", "4", "5")
